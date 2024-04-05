@@ -1,0 +1,59 @@
+{
+  "name": "backstage-plugin-snyk-dynamic",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts"
+  },
+  "backstage": {
+    "role": "backend-plugin"
+  },
+  "scripts": {},
+  "dependencies": {
+    "@material-ui/icons": "4.11.3",
+    "@material-ui/lab": "4.0.0-alpha.61",
+    "@snyk/dep-graph": "2.8.1",
+    "@types/react-dom": "^18.2.18",
+    "react-circular-progressbar": "^2.1.0",
+    "react-use": "^17.4.0"
+  },
+  "devDependencies": {},
+  "peerDependencies": {
+    "@material-ui/core": "^4.12.2",
+    "react": "^16.13.1 || ^17.0.0",
+    "react-dom": "^16.13.1 || ^17.0.0",
+    "react-router-dom": "^6.18.0",
+    "@backstage/catalog-model": "^1.4.5",
+    "@backstage/core-components": "^0.14.3",
+    "@backstage/core-plugin-api": "^1.9.1",
+    "@backstage/plugin-catalog-react": "^1.11.2",
+    "@backstage/backend-dynamic-feature-service": "0.1.0"
+  },
+  "files": [
+    "dist",
+    "config.d.ts"
+  ],
+  "configSchema": "config.d.ts",
+  "pkg": {
+    "scripts": [
+      "dist/**/*.js"
+    ]
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
+  "bundleDependencies": true,
+  "overrides": {
+    "@aws-sdk/util-utf8-browser": {
+      "@smithy/util-utf8": "^2.0.0"
+    }
+  },
+  "resolutions": {
+    "@aws-sdk/util-utf8-browser": "npm:@smithy/util-utf8@~2"
+  }
+}
